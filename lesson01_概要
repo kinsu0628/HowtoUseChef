@@ -1,0 +1,22 @@
+
+1.概要
+インフラをコードで記述して使いまわすためのツール。
+
+2.必要な知識
+- Unix
+- Ruby
+- Vagrant
+
+3.概念・用語
+−−−−−−−−−−−−
+WORKSTATION
+→ローカルのPC
+
+CHEFSERVER
+→WORKSTATIONから受け取ったCOOKBOOKから
+ NODEを組み立てる
+
+NODE
+→各サーバー
+−−−−−−−−−−−−
+

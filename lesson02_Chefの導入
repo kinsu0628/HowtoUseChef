@@ -1,0 +1,19 @@
+
+1.WORKSTATION側のrubyとgemの存在確認
+ruby -v
+gem -v
+ 
+ 2.以下を実行し、chefをインストールする -公式サイトより-
+curl -L https://www.opscode.com/chef/install.sh | sudo bash
+
+3.chef solo向けのプラグイン knife-soloをインストールする
+sudo gem install knife-solo
+
+4.2つが入ったことを確認する
+gem list
+
+5.knife コマンドの設定を行う
+knife configure
+※質問は全てenterで可
+
+以上
