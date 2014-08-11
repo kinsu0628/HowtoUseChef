@@ -1,0 +1,19 @@
+
+1.作業ディレクトリにvagrantで仮想マシンを設置する。
+vagrant init centos64
+
+2.仮想マシンのIPを変更
+vi Vagrantfile
+config.vm.network : private_networkを変更
+変更例 "192.168.33.190"
+
+3.knifeが使いやすくなるように、仮想マシンに名前をつけておく
+vagrant ssh-config --host harmony
+vagrant ssh-config --host harmony >> ~/.ssh/config
+
+
+4.sshの動作確認
+ssh harmony
+上記で仮想マシンにアクセスできるか確認
+
+以上
