@@ -1,0 +1,17 @@
+
+Chefの利用までの手順
+
+1.MACにChefリポジトリの作成
+2.NodeをChef対応にする
+3.Cookbookの作成
+4.CookbookをNodeに適応させる
+
+1.MACにChefリポジトリの作成
+以下を実行
+knife solo init chef-repo
+
+2.NodeをChef対応にする
+以下を実行
+cd chef-repo
+knife solo prepare harmony --bootstrap-version 11.12.0
+

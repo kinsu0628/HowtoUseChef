@@ -8,3 +8,15 @@
 .vagrant/machines/default/virtualbox/index_uuid
 
 .vagrant/machines/default/virtualbox/synced_folders
+
+chef-repo/.chef/knife.rb
+
+chef-repo/data_bags/.gitkeep
+
+chef-repo/nodes/.gitkeep
+
+chef-repo/roles/.gitkeep
+
+chef-repo/site-cookbooks/.gitkeep
+
+chef-repo/environments/.gitkeep
