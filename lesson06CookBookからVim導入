@@ -1,0 +1,15 @@
+
+1.hello/recipe/default.rbを編集
+以下を追記
+package "vim-enhanced" do
+	action :install
+end
+
+2.実行！
+knife solo cook harmony 
+
+3.確認
+vagrant up
+ssh harmony 
+vim
+の順に実行

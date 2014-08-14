@@ -6,4 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-log "hello" 
+log " start " 
+package "vim-enhanced" do
+	action :install
+end

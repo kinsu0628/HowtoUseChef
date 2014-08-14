@@ -1,0 +1,30 @@
+
+Chefの利用までの手順
+
+1.MACにChefリポジトリの作成
+2.NodeをChef対応にする
+3.Cookbookの作成
+4.CookbookをNodeに適応させる
+
+3.Cookbookの作成
+chef-repo内で以下を実行し、cookbookを作る
+knife cookbook create hello -o site-cookbooks
+
+4.site-cookbooksの中にhelloができていることを確認
+
+5.hello/recipe/default.rbを編集
+log "hello world"を記入
+
+6.chef-repo/nodes/harmony.jsonを編集
+
+{
+	"run_list":[
+		"recipe[hello]"
+	]
+}
+
+7.chef-repo/.chef/knife.rbに以下を追記
+ssl_verify_mode  :verify_peer
+
+8.実行！
+knife solo cook harmony 
