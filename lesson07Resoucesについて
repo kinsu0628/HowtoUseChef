@@ -1,0 +1,13 @@
+1.リソースの種類について
+
+以下の部分をリソースという
+--------------
+package "vim-enhanced" do
+	action :install
+end
+--------------
+
+利用できるリソースは公式サイトから確認できる
+http://docs.getchef.com/chef/resources.html
+
+wgetやaptなどサーバーによるコマンドの違いはシェフが受け止める

@@ -10,3 +10,9 @@ log " start "
 package "vim-enhanced" do
 	action :install
 end
+
+#serviceのリソースを利用する
+#ファイアウォールを消す service iptables stop
+service "iptables" do
+	action [:stop, :disable]
+end
