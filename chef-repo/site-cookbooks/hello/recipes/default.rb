@@ -8,7 +8,7 @@
 #
 log " start " 
 package "vim-enhanced" do
-	action :install
+		action :install
 end
 
 #serviceのリソースを利用する
@@ -16,3 +16,15 @@ end
 service "iptables" do
 	action [:stop, :disable]
 end
+
+#php mysql-server httpd
+%w{php mysql-server httpd}.each do |p|
+	package p do
+		action :install
+	end
+end
+
+service "httpd" do
+	action [:start, :enable]
+end
+	
