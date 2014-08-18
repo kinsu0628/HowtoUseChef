@@ -1,0 +1,23 @@
+1.templateを記述
+
+template "index.html" do
+    #転送先 ドキュメントルート
+	path "/var/www/html/index.html"
+	#転送ファイル
+	source "index.html.erb"
+	#転送ファイルの権限
+	mode 0644
+end
+
+2.chef-repo/site-cookbooks/hello/templateに転送するファイルを作成
+index.html.erbを作成
+
+--------------------
+<html>
+  hello from chef
+</html>
+--------------------
+
+3.knife solo cook harmony を実行
+
+4.http://192.168.33.20にアクセスして表示確認する。

@@ -27,4 +27,10 @@ end
 service "httpd" do
 	action [:start, :enable]
 end
-	
+
+#TOPページを作る
+template "index.html" do
+	path "/var/www/html/index.html"
+	source "index.html.erb"
+	mode 0644
+end
