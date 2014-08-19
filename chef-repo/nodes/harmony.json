@@ -1,4 +1,7 @@
 {
+  "owner":{
+    "name":"himuro"
+  },
   "run_list": [
 	"recipe[hello]"
   ],

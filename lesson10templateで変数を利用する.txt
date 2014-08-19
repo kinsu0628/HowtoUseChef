@@ -1,0 +1,21 @@
+1.実行時にtemplateに値を渡すことができる。
+harmony.json以下を追記
+
+"owner":{
+   "name":"himuro"
+},
+
+2.templateに以下を記述
+<%= node['owner']['name'] %>
+※変数の仕様の際はnode変数を利用する
+
+3.knife solo cook harmonyを実行
+
+4.ohaiという実行時の情報を保持する変数も利用できる。
+ohaiと入力すれば確認できる
+
+ohai platformとterminalから入力すると値を確認できる
+
+5.ohaiの利用例は以下
+<%= node[:platform] %>
+※ohaiではシンボルで指定する
