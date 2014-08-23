@@ -1,0 +1,25 @@
+1.nodeから設定ファイルに使うファイルをコピーする
+cch harmony
+cp /etc/httpd/conf/httpd.conf /vagrant
+exit
+
+2.共有フォルダから受け取った設定ファイルを
+chef-repo/site-cookbook/hello/template/defalut/にリネームして移動
+"httpd.conf.erb"
+
+3.default.rbからtemplate登録する。
+template "httpd.conf" do
+	path "/etc/httpd/conf/httpd.conf"
+	source "httpd.conf.erb"
+	mode 0644
+	notifies :restart, 'service[httpd]'
+end
+
+※notifiesは対象のtemplateが変更された際に
+ イベントを起こすことが出来る設定
+ 
+ 4.ポートを変更してみる
+ Listen <%= node['httpd']['port'] %>
+
+5.実行
+knife solo cook harmony
