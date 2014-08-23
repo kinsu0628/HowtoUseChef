@@ -34,3 +34,11 @@ template "index.html" do
 	source "index.html.erb"
 	mode 0644
 end
+
+#アパッチの設定ファイル
+template "httpd.conf" do
+	path "/etc/httpd/conf/httpd.conf"
+	source "httpd.conf.erb"
+	mode 0644
+	notifies :restart, 'service[httpd]'
+end
