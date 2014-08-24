@@ -1,0 +1,8 @@
+berkshelfを入れる
+gem install berkshelf --no-ri --no-rdoc
+
+cookbookを探す
+
+cookbookの詳細を確認する
+knife cookbook site show apache2
+
