@@ -1,8 +1,28 @@
-berkshelfを入れる
+1.berkshelfを入れる
 gem install berkshelf --no-ri --no-rdoc
 
-cookbookを探す
+2.cookbookを探す
+knife cookbook site search apache2
 
-cookbookの詳細を確認する
+3.cookbookの詳細を確認する
 knife cookbook site show apache2
 
+4.chef-repoにBerksfileを作成しインポートするクックブックを記載
+touch Berksfile
+
+site :opscode
+
+cookbook 'yum-epel'
+cookbook 'apache2'
+cookbook 'mysql'
+
+5.berksコマンドを実行
+※生成されるBerksfile.lockはクックブックとそのバージョンを示す。
+
+6.Nodeに記述
+"run_list":[
+	"recipe[yum-epel]",
+	"recipe[hello]"	
+]
+
+7.knife solo cook harmony

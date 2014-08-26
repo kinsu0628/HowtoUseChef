@@ -6,7 +6,8 @@
     "name":"himuro"
   },
   "run_list": [
-	"recipe[hello]"
+	"recipe[hello]",
+	"recipe[yum-epel]"
   ],
   "automatic": {
     "ipaddress": "harmony"
